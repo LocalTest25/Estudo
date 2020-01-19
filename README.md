@@ -1,2 +1,2 @@
 # Uma revisao geral & Lembretes
-Banco de dados,Linguagens & Sintaxe
+BANCO DE DADOS, PHP , PYTHON , JAVASCRIPT , SINTAXES
