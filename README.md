@@ -1,3 +1,2 @@
 # Uma revisao geral & Lembretes
-Banco de dados
-Linguagens & Sintaxe
+Banco de dados,Linguagens & Sintaxe
