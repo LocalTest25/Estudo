@@ -1,0 +1,68 @@
+Curso MySQL #03 – Criando o primeiro Banco de Dados
+
+Structured Query Language, ou Linguagem de Consulta Estruturada ou SQL, é a linguagem de pesquisa declarativa padrão para banco de dados relacional (base de dados relacional). Muitas das características originais do SQL foram inspiradas na álgebra relacional.
+
+create database cadastro;
+
+use cadastro;
+
+nome varchar(30),
+idade tinyint, // Para ocupar menos bytes
+sexo char(1). // Tera apenas uma opcao
+peso float,   // Numero quebrado
+altura float, // Numero quebrado
+nacionalidade varchar(20)
+);	
+
+"create table" Pessoas //cria uma tabela com o nome que você quiser
+
+show databases; // mostra quais os bancos de dados criados
+
+use cadastro //Usar banco de dados cadastro
+
+status //qual banco de dados ta aberto
+
+show tables //mostrar as tabelas
+
+describe pessoas //descreve a tabela pessoas
+
+(Bancos de dados>tabelas>registros>campos)
+
+drop database "nome" // para deletar banco de dados
+```````````````````````````````````````````````````````````````````````````````````````````````````
+Curso MySQL #04 – Melhorando a Estrutura do Banco de Dados
+
+Drop database cadastro
+
+
+create database cadastro
+default character set utf8  // Permitir acentuacao ! linga latina
+default collate utf8_general_ci;
+
+
+create table pessoas (
+
+id int NOT NULL AUTO_INCREMENT,
+nome varchar (30) NOT NULL,
+nascimento date,  // Puxa a data atual
+sexo enum('m' , 'f'),   //Define quais os valores aceitos
+peso decimal (5,2),  // 5 total de casas 2 dois numeros vao ficar depois da virgula
+altura decimal (3,2)     // 3 total de casas 2 dois numeros vao ficar depois da virgula
+nacionalidade varchar(20) default 'brasil'
+PRIMARY KEY (id)
+)
+default charset = utf8;
+````````````````````````````````````````````````````````````````````````````````````````
+Curso MySQL #05 – Inserindo Dados na Tabela (INSERT INTO)
+
+INSERT INTO pessoas
+(id, nome , nascimento, sexo,peso,altura , nascionalidade)
+values
+('1','Fredo', '1984-01-02','m','78.5','1.83','Brasil');
+
+Se tiver com chave primaria auto increment pode fazer
+
+(nome , nascimento, sexo,peso,altura , nascionalidade)
+values
+('Fredo', '1984-01-02','m','78.5','1.83','Brasil');
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
